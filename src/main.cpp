@@ -1,13 +1,14 @@
 #include <iostream>
-#include "sqlmanager.hpp"
+#include "sql_access.hpp"
 
 int main(){
 
 	const sqlInfo Param = sqlInfo("127.0.0.1:3389", "root", "", "DB"); //Parameter of the sql server
-	auto db = sqlManager(Param) ; //Init db
-	db.Query("select * from TestDB");
-	while(db.res->next()){
-		std::cout<<db.res->getString("name")<<std::endl;	
-	}
+	
+	auto *db = new sqlAccess(Param);
+	db->getQuery("name");
+
+	delete db;
+
 	return 0;
 }

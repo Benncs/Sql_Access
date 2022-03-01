@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __SQLMANAGER_HPP__
+#define __SQLMANAGER_HPP__
 
 #include <mysql_connection.h>
 #include <cppconn/driver.h>
@@ -32,11 +33,11 @@ public:
 
 private:
 	sql::Driver* driver; //sql driver 
-	sql::Connection* con; //sql connection 
-	sql::Statement* stmt = nullptr; //query statement 
+	sql::Connection* db_connection; //sql connection 
+	sql::Statement* statement = nullptr; //query statement 
 
 protected:
-	sql::ResultSet* res = nullptr; //query result 
+	sql::ResultSet* query_res = nullptr; //query result 
 
 	/**
 	 * \brief Function to execute a query 
@@ -50,3 +51,4 @@ protected:
 	static std::string concatstring(const std::string& s1, const std::string& s2);
 
 };
+#endif 
