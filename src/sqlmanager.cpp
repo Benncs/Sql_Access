@@ -20,7 +20,7 @@ sqlManager::~sqlManager()
 	delete db_connection;
 	delete statement;
 	delete query_res;
-//	delete driver;
+	delete driver;
 }
 
 
