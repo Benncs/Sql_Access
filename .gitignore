@@ -1,0 +1,7 @@
+/lib_include
+/lib64
+*.sln
+*.vcxproj*
+/.vs
+/x64
+/build

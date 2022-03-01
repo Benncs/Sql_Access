@@ -34,11 +34,12 @@ public:
 private:
 	sql::Connection* db_connection; //sql connection 
 	sql::Statement* statement = nullptr; //query statement 
+	sql::Driver* driver; //sql driver 
+
 
 protected:
 	sql::ResultSet* query_res = nullptr; //query result 
 
-	//sql::Driver* driver; //sql driver 
 	/**
 	 * \brief Function to execute a query 
 	 * \param sql query line to execute 
