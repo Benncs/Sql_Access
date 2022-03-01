@@ -11,6 +11,6 @@ class sqlAccess : public sqlManager{
     
     private:
         
-}
+};
 
 #endif 

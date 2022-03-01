@@ -4,12 +4,12 @@ sqlManager::sqlManager(const sqlInfo& Database) {
 	try {
 		driver = get_driver_instance(); //Check sql driver 
 		db_connection = driver->connect(Database.server, Database.username, Database.password); //Establish connection 
-		con->setSchema(Database.schema); 
+		db_connection->setSchema(Database.schema); 
 		query_res = nullptr;
 		statement = nullptr;
 	}
 	catch (std::exception& e) {
-		std::string Err = e.what() + "Error connection"
+		std::string Err = "Error connection"; //+ e.what();
 		throw std::invalid_argument(Err);
 	}
 
@@ -20,7 +20,7 @@ sqlManager::~sqlManager()
 	delete db_connection;
 	delete statement;
 	delete query_res;
-	delete driver;
+//	delete driver;
 }
 
 
