@@ -8,16 +8,16 @@ int main(){
 
 	
 	auto *db = new sqlAccess(Param);
-	//std::string query = "select * from db1";
-	//db->getQuery(query, "col1", "col2");
+	std::string query = "select * from db1";
+	db->getWholeQuery(query);
 
 	//std::string query = "describe db1";
 	//db->getQuery(query,"");
+	
+	//db->Describe("db1");
 
-	db->Describe("db1");
-
-	db->Switch_Schema("units");
-	db->Describe("conversiontable");
+	//db->Switch_Schema("units");
+	//db->Describe("conversiontable");
 
 	delete db;
 
