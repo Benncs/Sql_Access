@@ -2,6 +2,7 @@
 
 
 sqlAccess::sqlAccess(const sqlInfo& param):sqlManager(param){
+    //TODO error if thrown when connection error occurs
 }
 
 int sqlAccess::getQuery(const std::string& query,const std::string& col){
@@ -74,7 +75,7 @@ void sqlAccess::WholeQueryRes(){
     sql::ResultSetMetaData* res_meta = query_res->getMetaData();
     int columns = res_meta->getColumnCount();
     while (query_res->next()){
-        for (int i = 1; i < columns; ++i){
+        for (int i = 1; i < columns+1; ++i){
             std::cout << query_res->getString(i) << "    |";
         }
         std::cout << std::endl;

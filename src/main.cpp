@@ -3,8 +3,8 @@
 
 int main(){
 
-	const sqlInfo Param = sqlInfo("127.0.0.1", "root", "1234", "dev"); //Parameter of the sql server
-	const sqlInfo Param2 = sqlInfo("127.0.0.1", "root", "1234", "units"); //Parameter of the sql server
+	const sqlInfo Param = sqlInfo("127.0.0.1:3389", "root", "1234", "dev"); //Parameter of the sql server
+	//const sqlInfo Param2 = sqlInfo("127.0.0.1", "root", "1234", "units"); //Parameter of the sql server
 
 	
 	auto *db = new sqlAccess(Param);
@@ -16,6 +16,8 @@ int main(){
 	
 	//db->Describe("db1");
 
+
+	//db->Describe("db1");
 	//db->Switch_Schema("units");
 	//db->Describe("conversiontable");
 
