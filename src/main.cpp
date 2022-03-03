@@ -13,9 +13,11 @@ int main(){
 
 	//std::string query = "describe db1";
 	//db->getQuery(query,"");
-
+	
 	//db->Describe("db1");
 
+
+	//db->Describe("db1");
 	//db->Switch_Schema("units");
 	//db->Describe("conversiontable");
 
