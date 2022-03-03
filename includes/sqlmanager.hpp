@@ -7,20 +7,8 @@
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <vector>
+#include "sql_info.hpp"
 
-
-/**
- * \brief Structur to store sql server's info
- */
-struct sqlInfo {
-	sqlInfo() = default;
-	sqlInfo(std::string s,std::string un, std::string pwd,std::string schem)
-		:server(std::move(s)),username(std::move(un)),password(std::move(pwd)),schema(std::move(schem)) {}
-	std::string server;
-	std::string username;
-	std::string password;
-	std::string schema;
-};
 
 class sqlManager {
 
