@@ -17,7 +17,7 @@ LDFLAGS = -lpthread -lmysqlcppconn
 FLAGS = -std=c++2a -Wall -g $(addprefix -I,$(INCLUDEDIR)) 
 
 
-all: dir $(BUILDDIR)/$(EXECUTABLE) clean
+all: dir $(BUILDDIR)/$(EXECUTABLE) 
 
 dir:
 	mkdir -p $(BUILDDIR)
